@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  tpms-ios
+
+  Created by ttonway on 2017/1/20.
+  Copyright © 2017年 ttonway. All rights reserved.
+*/
+"unknown_device" = "未知设备";
+"ble_not_supported" = "该设备不支持BLE";
+"error_bluetooth_not_supported" = "蓝牙不可用";
+
+"activity_main" = "胎压监测";
+"activity_scan" = "设备搜索";
+"menu_scan" = "搜索";
+"menu_stop" = "停止";
+"tab_monitor" = "功能";
+"tab_learn" = "ID学习";
+"tab_exchange" = "轮胎换位";
+"tab_setting" = "设置";
+"btn_ok" = "确定";
+"btn_cancel" = "取消";
+"btn_reset" = "恢复出厂设置";
+"btn_bluetooth" = "蓝牙";
+"btn_tire1" = "左前轮";
+"btn_tire2" = "左后轮";
+"btn_tire3" = "右前轮";
+"btn_tire4" = "右后轮";
+"btn_tire1_match" = "左前轮学习";
+"btn_tire2_match" = "左后轮学习";
+"btn_tire3_match" = "右前轮学习";
+"btn_tire4_match" = "右后轮学习";
+"notification_service_running" = "TPMS正在运行";
+
+"label_language" = "语言";
+"label_unit" = "压力单位";
+"label_degree" = "温度单位";
+"label_pressure_max" = "压力报警上限";
+"label_pressure_min" = "压力报警下限";
+"label_temperature_max" = "温度报警上限";
+"label_theme" = "主题";
+"theme_plain" = "简洁";
+"theme_star" = "星空";
+"theme_modern" = "科技";
+"label_voice" = "声音";
+
+"alert_message_usb_host_unavailable" = "您的手机不支持USB HOST，请更换其他手机再试";
+"alert_message_usb_io_error" = "主机连接错误";
+"alert_message_learn" = "胎压学习搜索中%1$s";
+"alert_message_exchange" = "是否交换%1$s和%2$s";
+
+"alert_message_tire1_pressure_high" = "左前轮胎压过高";
+"alert_message_tire2_pressure_high" = "左后轮胎压过高";
+"alert_message_tire3_pressure_high" = "右前轮胎压过高";
+"alert_message_tire4_pressure_high" = "右后轮胎压过高";
+"alert_message_tire1_pressure_low" = "左前轮胎压过低";
+"alert_message_tire2_pressure_low" = "左后轮胎压过低";
+"alert_message_tire3_pressure_low" = "右前轮胎压过低";
+"alert_message_tire4_pressure_low" = "右后轮胎压过低";
+"alert_message_tire1_pressure_error" = "左前轮传感器失效";
+"alert_message_tire2_pressure_error" = "左后轮传感器失效";
+"alert_message_tire3_pressure_error" = "右前轮传感器失效";
+"alert_message_tire4_pressure_error" = "右后轮传感器失效";
+"alert_message_tire1_temp_high" = "左前轮温度过高";
+"alert_message_tire2_temp_high" = "左后轮温度过高";
+"alert_message_tire3_temp_high" = "右前轮温度过高";
+"alert_message_tire4_temp_high" = "右后轮温度过高";
+"alert_message_tire1_battery_low" = "左前轮电量不足";
+"alert_message_tire2_battery_low" = "左后轮电量不足";
+"alert_message_tire3_battery_low" = "右前轮电量不足";
+"alert_message_tire4_battery_low" = "右后轮电量不足";
+"alert_message_tire1_matched" = "左前轮学习成功";
+"alert_message_tire2_matched" = "左后轮学习成功";
+"alert_message_tire3_matched" = "右前轮学习成功";
+"alert_message_tire4_matched" = "右后轮学习成功";

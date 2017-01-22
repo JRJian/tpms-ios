@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6BR-wg-5wj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Lsk-bS-FUn">
+            <objects>
+                <navigationController id="6BR-wg-5wj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqu-Wj-zXf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BBJ-cn-cHS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2x-jc-gZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431" y="209"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="window_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="YT1-hR-Iw6"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-kM-1DW" userLabel="TopBar">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-HB-L3V">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BER-kL-aKi"/>
+                                            <constraint firstAttribute="width" constant="60" id="v5q-Pe-vMS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="蓝牙" image="ic_bluetooth.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqe-pw-xrm">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="SbP-Kq-7oL"/>
+                                            <constraint firstAttribute="width" constant="60" id="orp-vb-cMf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="设置" image="ic_setting.png"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zqe-pw-xrm" firstAttribute="centerY" secondItem="OVk-kM-1DW" secondAttribute="centerY" id="1js-2W-0KA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zqe-pw-xrm" secondAttribute="trailing" constant="8" id="ays-zl-Ij4"/>
+                                    <constraint firstItem="oO0-HB-L3V" firstAttribute="centerY" secondItem="OVk-kM-1DW" secondAttribute="centerY" id="dej-i4-03M"/>
+                                    <constraint firstAttribute="height" constant="60" id="m9s-jn-mE3"/>
+                                    <constraint firstItem="oO0-HB-L3V" firstAttribute="leading" secondItem="OVk-kM-1DW" secondAttribute="leading" constant="8" id="o50-9W-EMK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjo-K5-eMq"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-Bb-amS" userLabel="BottomBar">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottombar.png" translatesAutoresizingMaskIntoConstraints="NO" id="kCe-Ac-4ab">
+                                        <frame key="frameInset" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gf-uK-uEp">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7Gf-uK-uEp" secondAttribute="height" multiplier="5:3" id="9GL-Qg-T9N"/>
+                                            <constraint firstAttribute="height" constant="60" id="TJR-rh-INu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="学习" image="ic_learn.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7D-gq-ObB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="UP5-L0-iRq"/>
+                                            <constraint firstAttribute="width" secondItem="k7D-gq-ObB" secondAttribute="height" multiplier="112:75" id="thr-Bi-X1B"/>
+                                        </constraints>
+                                        <state key="normal" title="监控" image="ic_monitor.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-YE-LrR">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="OJV-vq-8WF"/>
+                                            <constraint firstAttribute="width" secondItem="CKg-YE-LrR" secondAttribute="height" multiplier="5:3" id="d6y-o5-PIu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="交换" image="ic_exchange.png"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CKg-YE-LrR" secondAttribute="bottom" id="0Xg-LJ-glZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Gf-uK-uEp" secondAttribute="bottom" id="1Bn-D2-N7n"/>
+                                    <constraint firstItem="7Gf-uK-uEp" firstAttribute="leading" secondItem="kpi-Bb-amS" secondAttribute="trailing" multiplier="0.08" id="T7A-Qo-uJV"/>
+                                    <constraint firstItem="CKg-YE-LrR" firstAttribute="trailing" secondItem="kpi-Bb-amS" secondAttribute="trailing" multiplier="0.92" id="Vgx-Od-zdW"/>
+                                    <constraint firstAttribute="width" secondItem="kpi-Bb-amS" secondAttribute="height" multiplier="75:16" id="a33-d9-iDf"/>
+                                    <constraint firstAttribute="bottom" secondItem="k7D-gq-ObB" secondAttribute="bottom" id="aMX-nw-dIO"/>
+                                    <constraint firstItem="k7D-gq-ObB" firstAttribute="centerX" secondItem="kpi-Bb-amS" secondAttribute="centerX" id="tbS-eJ-eth"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OVk-kM-1DW" secondAttribute="trailing" id="54t-MT-llJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kpi-Bb-amS" secondAttribute="bottom" id="75g-Fa-qQY"/>
+                            <constraint firstItem="Mjo-K5-eMq" firstAttribute="top" secondItem="OVk-kM-1DW" secondAttribute="bottom" id="BCV-MF-0qu"/>
+                            <constraint firstItem="kpi-Bb-amS" firstAttribute="top" secondItem="Mjo-K5-eMq" secondAttribute="bottom" id="Boa-kD-kcf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YT1-hR-Iw6" secondAttribute="bottom" id="DP0-Zr-4jo"/>
+                            <constraint firstItem="OVk-kM-1DW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="FuK-Vz-txE"/>
+                            <constraint firstAttribute="trailing" secondItem="YT1-hR-Iw6" secondAttribute="trailing" id="JzP-Hl-G9n"/>
+                            <constraint firstItem="kpi-Bb-amS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K8c-or-yob"/>
+                            <constraint firstAttribute="trailing" secondItem="kpi-Bb-amS" secondAttribute="trailing" id="NCH-Rx-kqI"/>
+                            <constraint firstItem="YT1-hR-Iw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vuu-j6-Spv"/>
+                            <constraint firstAttribute="trailing" secondItem="Mjo-K5-eMq" secondAttribute="trailing" id="ZlK-8o-Qio"/>
+                            <constraint firstItem="OVk-kM-1DW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dFM-X7-v37"/>
+                            <constraint firstItem="Mjo-K5-eMq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dLX-rw-PvW"/>
+                            <constraint firstItem="YT1-hR-Iw6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="us1-SH-Zaq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WRn-Tz-7mo"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bluetoothButton" destination="oO0-HB-L3V" id="t34-sN-qgs"/>
+                        <outlet property="container" destination="Mjo-K5-eMq" id="Ato-BM-SVb"/>
+                        <outlet property="exchangeButton" destination="CKg-YE-LrR" id="t4d-Xc-chF"/>
+                        <outlet property="learnButton" destination="7Gf-uK-uEp" id="tCd-aO-a2n"/>
+                        <outlet property="monitorButton" destination="k7D-gq-ObB" id="o4P-PU-7sI"/>
+                        <outlet property="settingButton" destination="Zqe-pw-xrm" id="xap-D8-stg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="208"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottombar.png" width="320" height="68"/>
+        <image name="ic_bluetooth.png" width="36" height="36"/>
+        <image name="ic_exchange.png" width="36" height="36"/>
+        <image name="ic_learn.png" width="36" height="36"/>
+        <image name="ic_monitor.png" width="48" height="48"/>
+        <image name="ic_setting.png" width="36" height="36"/>
+        <image name="window_background.png" width="1024" height="600"/>
+    </resources>
+</document>

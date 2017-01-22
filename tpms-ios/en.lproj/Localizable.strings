@@ -1,0 +1,75 @@
+/* 
+  Localizable.strings
+  tpms-ios
+
+  Created by ttonway on 2017/1/20.
+  Copyright © 2017年 ttonway. All rights reserved.
+*/
+"unknown_device" = "Unknown device";
+"ble_not_supported" = "BLE is not supported";
+"error_bluetooth_not_supported" = "Bluetooth not supported.";
+
+"activity_main" = "TPMS";
+"activity_scan" = "Scan device";
+"menu_scan" = "Scan";
+"menu_stop" = "Stop";
+"tab_monitor" = "Function";
+"tab_learn" = "ID Match";
+"tab_exchange" = "Tire Exchange";
+"tab_setting" = "Setting";
+"btn_ok" = "OK";
+"btn_cancel" = "Cancel";
+"btn_reset" = "Reset";
+"btn_voice" = "Sound";
+"btn_bluetooth" = "Bluetooth";
+"btn_tire1" = "Left Front Wheel";
+"btn_tire2" = "Left End Wheel";
+"btn_tire3" = "Right Front Wheel";
+"btn_tire4" = "Right End Wheel";
+"btn_tire1_match" = "Left Front Match";
+"btn_tire2_match" = "Left End Match";
+"btn_tire3_match" = "Right Front Match";
+"btn_tire4_match" = "Right End Match";
+"notification_service_running" = "TPMS is running";
+
+"label_language" = "Language";
+"label_unit" = "Pressure Unit";
+"label_degree" = "Temp Unit";
+"label_pressure_max" = "Pressure Alarm Upper Limit";
+"label_pressure_min" = "Pressure Alarm Lower Limit";
+"label_temperature_max" = "Temperature Alarm Upper";
+"label_theme" = "Theme";
+"theme_plain" = "Plain";
+"theme_star" = "Star";
+"theme_modern" = "Modern";
+"label_voice" = "Sound";
+
+"alert_message_usb_host_unavailable" = "USB HOST not supported, please try other devices";
+"alert_message_usb_io_error" = "Host IO error";
+"alert_message_learn" = "Mathing %1$s";
+"alert_message_exchange" = "Confirm to exchange %1$s and %2$s";
+
+"alert_message_tire1_pressure_high" = "left front wheel pressure high";
+"alert_message_tire2_pressure_high" = "left end wheel pressure high";
+"alert_message_tire3_pressure_high" = "right front wheel pressure high";
+"alert_message_tire4_pressure_high" = "right end wheel pressure high";
+"alert_message_tire1_pressure_low" = "left front wheel pressure low";
+"alert_message_tire2_pressure_low" = "left end wheel pressure low";
+"alert_message_tire3_pressure_low" = "right front wheel pressure low";
+"alert_message_tire4_pressure_low" = "right end wheel pressure low";
+"alert_message_tire1_pressure_error" = "left front wheel sensor error";
+"alert_message_tire2_pressure_error" = "left end wheel sensor error";
+"alert_message_tire3_pressure_error" = "right front wheel sensor error";
+"alert_message_tire4_pressure_error" = "right end wheel sensor error";
+"alert_message_tire1_temp_high" = "left front wheel temperature high";
+"alert_message_tire2_temp_high" = "left end wheel temperature high";
+"alert_message_tire3_temp_high" = "right front wheel temperature high";
+"alert_message_tire4_temp_high" = "right end wheel temperature high";
+"alert_message_tire1_battery_low" = "left front wheel battery low";
+"alert_message_tire2_battery_low" = "left end wheel battery low";
+"alert_message_tire3_battery_low" = "right front wheel battery low";
+"alert_message_tire4_battery_low" = "right end wheel battery low";
+"alert_message_tire1_matched" = "left front wheel matched success";
+"alert_message_tire2_matched" = "left end wheel matched success";
+"alert_message_tire3_matched" = "right front wheel matched success";
+"alert_message_tire4_matched" = "right end wheel matched success";
