@@ -9,8 +9,10 @@
 #import "SettingViewController.h"
 
 #import "Common.h"
+#import "TpmsDevice.h"
 #import "RadioGroup.h"
 #import "NumberPicker.h"
+#import "ViewController.h"
 
 @interface SettingViewController () <RadioGroupDelegate> {
     NSArray * tableCells;
@@ -23,6 +25,9 @@
     NumberPicker *upperLimitPicker;
     NumberPicker *lowerLimitPicker;
     NumberPicker *tempLimitPicker;
+    
+    TpmsDevice *device;
+    Preferences *preference;
 }
 
 @end
@@ -35,13 +40,34 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsSelection = NO;
+    self.tableView.contentInset = UIEdgeInsetsMake(16, 0, 16, 0);
     [self buildTableCells];
     
+    device = [TpmsDevice sharedInstance];
+    preference = [Preferences sharedInstance];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildTableCells) name:NotificationLanguageChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveSetting) name:UIApplicationWillResignActiveNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    upperLimitPicker.value = device.pressureHighLimit;
+    lowerLimitPicker.value = device.pressureLowLimit;
+    tempLimitPicker.value = device.temperatureLimit;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self saveSetting];
 }
 
 - (void)buildTableCells {
-    Preferences *preference = [Preferences sharedInstance];
     
     UITableViewCell *cell1 = [self cellOfRadioGroup:FGLocalizedString(@"label_voice")];
     voiceGroup = (RadioGroup *)[cell1.contentView viewWithTag:222];
@@ -165,7 +191,6 @@
 }
 
 - (void)radioGroup:(RadioGroup *)group didCheckedChange:(NSInteger)tag {
-    Preferences *preference = [Preferences sharedInstance];
     if (group == voiceGroup) {
         preference.voiceOpen = tag == 1;
         
@@ -236,8 +261,24 @@
     return cell;
 }
 
-- (IBAction)resetSetting:(id)sender {
+- (void)saveSetting {
+    float bar1 = upperLimitPicker.value;
+    float bar2 = lowerLimitPicker.value;
+    int degree = (int) tempLimitPicker.value;
+    
+    if ([device isSettingsChanged:bar2 high:bar1 temp:degree]) {
+        [device saveSettings:bar2 high:bar1 temp:degree];
+    }
+}
 
+- (IBAction)resetSetting:(id)sender {
+    [device saveSettings:PRESSURE_LOWER_LIMIT_DEFAULT high:PRESSURE_UPPER_LIMIT_DEFAULT temp:TEMP_UPPER_LIMIT_DEFAULT];
+    [device clearData];
+    
+    [preference clear];
+    
+    ViewController *mainController = (ViewController *)self.parentViewController;
+    [mainController viewMonitorController:nil];
 }
 
 @end

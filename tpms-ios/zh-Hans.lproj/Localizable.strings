@@ -45,8 +45,8 @@
 
 "alert_message_usb_host_unavailable" = "您的手机不支持USB HOST，请更换其他手机再试";
 "alert_message_usb_io_error" = "主机连接错误";
-"alert_message_learn" = "胎压学习搜索中%1$s";
-"alert_message_exchange" = "是否交换%1$s和%2$s";
+"alert_message_learn" = "胎压学习搜索中%d";
+"alert_message_exchange" = "是否交换%@和%@";
 
 "alert_message_tire1_pressure_high" = "左前轮胎压过高";
 "alert_message_tire2_pressure_high" = "左后轮胎压过高";

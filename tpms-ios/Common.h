@@ -42,6 +42,8 @@
 
 + (Preferences *)sharedInstance;
 
+- (void)clear;
+
 @end
 
 
@@ -57,6 +59,7 @@
 
 + (UIColor *)commonGreenColor;
 + (UIColor *)commonOrangeColor;
++ (UIColor *)commonYellowColor;
 
 @end
 

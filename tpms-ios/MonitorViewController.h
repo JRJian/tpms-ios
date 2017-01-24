@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TireStatusView.h"
+
 @interface MonitorViewController : UIViewController
+
+@property (nonatomic) UIImageView *carImageView;
+
+@property (nonatomic) TireStatusView *board1;
+@property (nonatomic) TireStatusView *board2;
+@property (nonatomic) TireStatusView *board3;
+@property (nonatomic) TireStatusView *board4;
 
 @end

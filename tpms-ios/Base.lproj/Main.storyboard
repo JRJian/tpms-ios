@@ -12,7 +12,7 @@
         <scene sceneID="Lsk-bS-FUn">
             <objects>
                 <navigationController id="6BR-wg-5wj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqu-Wj-zXf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vqu-Wj-zXf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -36,9 +36,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="window_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="YT1-hR-Iw6"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_plain.png" translatesAutoresizingMaskIntoConstraints="NO" id="YT1-hR-Iw6"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-kM-1DW" userLabel="TopBar">
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-Fd-LCl"/>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-HB-L3V">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="BER-kL-aKi"/>
@@ -47,6 +48,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="蓝牙" image="ic_bluetooth.png"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJn-4h-wgX">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqe-pw-xrm">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="SbP-Kq-7oL"/>
@@ -58,10 +64,14 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Zqe-pw-xrm" firstAttribute="centerY" secondItem="OVk-kM-1DW" secondAttribute="centerY" id="1js-2W-0KA"/>
+                                    <constraint firstItem="gjU-Fd-LCl" firstAttribute="centerY" secondItem="oO0-HB-L3V" secondAttribute="centerY" id="RIS-2n-LBE"/>
                                     <constraint firstAttribute="trailing" secondItem="Zqe-pw-xrm" secondAttribute="trailing" constant="8" id="ays-zl-Ij4"/>
                                     <constraint firstItem="oO0-HB-L3V" firstAttribute="centerY" secondItem="OVk-kM-1DW" secondAttribute="centerY" id="dej-i4-03M"/>
                                     <constraint firstAttribute="height" constant="60" id="m9s-jn-mE3"/>
+                                    <constraint firstItem="gjU-Fd-LCl" firstAttribute="centerX" secondItem="oO0-HB-L3V" secondAttribute="centerX" id="mrK-j4-Mdv"/>
                                     <constraint firstItem="oO0-HB-L3V" firstAttribute="leading" secondItem="OVk-kM-1DW" secondAttribute="leading" constant="8" id="o50-9W-EMK"/>
+                                    <constraint firstItem="pJn-4h-wgX" firstAttribute="centerX" secondItem="OVk-kM-1DW" secondAttribute="centerX" id="tcp-Xa-uRU"/>
+                                    <constraint firstItem="pJn-4h-wgX" firstAttribute="top" secondItem="OVk-kM-1DW" secondAttribute="top" constant="10" id="wV7-xQ-Hhw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjo-K5-eMq"/>
@@ -128,12 +138,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="backgroundView" destination="YT1-hR-Iw6" id="laQ-6x-TQk"/>
                         <outlet property="bluetoothButton" destination="oO0-HB-L3V" id="t34-sN-qgs"/>
                         <outlet property="container" destination="Mjo-K5-eMq" id="Ato-BM-SVb"/>
                         <outlet property="exchangeButton" destination="CKg-YE-LrR" id="t4d-Xc-chF"/>
+                        <outlet property="indicatorView" destination="gjU-Fd-LCl" id="CVr-9d-vlP"/>
                         <outlet property="learnButton" destination="7Gf-uK-uEp" id="tCd-aO-a2n"/>
                         <outlet property="monitorButton" destination="k7D-gq-ObB" id="o4P-PU-7sI"/>
                         <outlet property="settingButton" destination="Zqe-pw-xrm" id="xap-D8-stg"/>
+                        <outlet property="titleLabel" destination="pJn-4h-wgX" id="x5L-gd-V7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,12 +155,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background_plain.png" width="1024" height="600"/>
         <image name="bottombar.png" width="320" height="68"/>
         <image name="ic_bluetooth.png" width="36" height="36"/>
         <image name="ic_exchange.png" width="36" height="36"/>
         <image name="ic_learn.png" width="36" height="36"/>
         <image name="ic_monitor.png" width="48" height="48"/>
         <image name="ic_setting.png" width="36" height="36"/>
-        <image name="window_background.png" width="1024" height="600"/>
     </resources>
 </document>

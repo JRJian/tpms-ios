@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TireButton.h"
+
 @interface ExchangeViewController : UIViewController
+
+@property (nonatomic) UIImageView *carImageView;
+
+@property (nonatomic) TireButton *board1;
+@property (nonatomic) TireButton *board2;
+@property (nonatomic) TireButton *board3;
+@property (nonatomic) TireButton *board4;
 
 @end

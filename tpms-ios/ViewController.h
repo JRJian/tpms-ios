@@ -15,18 +15,24 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic) IBOutlet UIImageView *backgroundView;
 @property (nonatomic) IBOutlet UIView *container;
 @property (nonatomic) IBOutlet UIButton *monitorButton;
 @property (nonatomic) IBOutlet UIButton *learnButton;
 @property (nonatomic) IBOutlet UIButton *exchangeButton;
 @property (nonatomic) IBOutlet UIButton *settingButton;
 @property (nonatomic) IBOutlet UIButton *bluetoothButton;
+@property (nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @property (nonatomic) MonitorViewController *monitorController;
 @property (nonatomic) LearnViewController *learnController;
 @property (nonatomic) ExchangeViewController *exchangeController;
 @property (nonatomic) SettingViewController *settingController;
 @property (nonatomic) UIViewController *currentController;
+
+
+- (IBAction)viewMonitorController:(id)sender;
 
 @end
 

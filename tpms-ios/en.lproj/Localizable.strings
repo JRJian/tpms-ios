@@ -46,8 +46,8 @@
 
 "alert_message_usb_host_unavailable" = "USB HOST not supported, please try other devices";
 "alert_message_usb_io_error" = "Host IO error";
-"alert_message_learn" = "Mathing %1$s";
-"alert_message_exchange" = "Confirm to exchange %1$s and %2$s";
+"alert_message_learn" = "Mathing %d";
+"alert_message_exchange" = "Confirm to exchange %@ and %@";
 
 "alert_message_tire1_pressure_high" = "left front wheel pressure high";
 "alert_message_tire2_pressure_high" = "left end wheel pressure high";

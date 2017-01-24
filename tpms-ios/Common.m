@@ -32,16 +32,30 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
-        NSNumber *num = [defaults objectForKey:KEY_VOICE_OPEN];
-        _voiceOpen = num ? [num boolValue] : YES;
-        
-        _pressureUnit = [defaults integerForKey:KEY_PRESSURE_UNIT];
-        _temperatureUnit = [defaults integerForKey:KEY_TEMP_UNIT];
-        _theme = [defaults integerForKey:KEY_THEME];
+        [self initValues];
     }
     return self;
+}
+
+- (void)initValues {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSNumber *num = [defaults objectForKey:KEY_VOICE_OPEN];
+    _voiceOpen = num ? [num boolValue] : YES;
+    
+    _pressureUnit = [defaults integerForKey:KEY_PRESSURE_UNIT];
+    _temperatureUnit = [defaults integerForKey:KEY_TEMP_UNIT];
+    _theme = [defaults integerForKey:KEY_THEME];
+}
+
+- (void)clear {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:KEY_VOICE_OPEN];
+    [defaults removeObjectForKey:KEY_PRESSURE_UNIT];
+    [defaults removeObjectForKey:KEY_TEMP_UNIT];
+    [defaults removeObjectForKey:KEY_THEME];
+    
+    [self initValues];
 }
 
 - (void)setVoiceOpen:(BOOL)voiceOpen {
@@ -107,6 +121,10 @@
 
 + (UIColor *)commonOrangeColor {
     return [UIColor colorWithRed:255.0f/255.0f green:104.0f/255.0f blue:22.0f/255.0f alpha:1.0f];
+}
+
++ (UIColor *)commonYellowColor {
+    return [UIColor colorWithRed:255.0f/255.0f green:240.0f/255.0f blue:1.0f/255.0f alpha:1.0f];
 }
 
 @end
