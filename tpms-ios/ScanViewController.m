@@ -126,6 +126,12 @@ static NSString *cellIdentifier = @"cell-identifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     CBPeripheral *peripheral = [self.foundDevice objectAtIndex:indexPath.row];
+    if (![peripheral isEqual:driver.currentPeripheral]) {
+        TpmsDevice *device = [TpmsDevice sharedInstance];
+        if (device.state != TpmsStateClose) {
+            [device closeDevice];
+        }
+    }
     [driver connect:peripheral];
     [self.tableView reloadData];
 }

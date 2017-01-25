@@ -141,21 +141,24 @@ NSInteger const ERROR_CONNECTION_FAIL = 3;
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     NSLog(@"centralManagerDidUpdateState %ld", (long)central.state);
     if (central.state != CBCentralManagerStatePoweredOn) {
-        // In a real app, you'd deal with all the states correctly
-        return;
-    }
-    
-    if (_currentPeripheral && !connectPeripheral) {
-        [self connect:_currentPeripheral];
-    }
-    
-    if (scanDelegate) {
-        [scanDelegate driverDidPowerOn:self];
-    }
-    if (scaning) {
-        NSLog(@"Scanning started");
-        [self.centralManager scanForPeripheralsWithServices:nil
-                                                    options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+        
+        if (self.state == TpmsStateOpenging) {
+            NSError *error = [NSError errorWithDomain:TpmsErrorDomain code:ERROR_CONNECTION_FAIL userInfo:nil];
+            [self.delegate driver:self onError:error];
+        }
+    } else {
+        if (_currentPeripheral && !connectPeripheral) {
+            [self connect:_currentPeripheral];
+        }
+        
+        if (scanDelegate) {
+            [scanDelegate driverDidPowerOn:self];
+        }
+        if (scaning) {
+            NSLog(@"Scanning started");
+            [self.centralManager scanForPeripheralsWithServices:nil
+                                                        options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+        }
     }
 }
 
@@ -193,10 +196,14 @@ NSInteger const ERROR_CONNECTION_FAIL = 3;
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     NSLog(@"Peripheral Disconnected %@ %@", peripheral, error);
     
-    if (!error) {
-        error = [NSError errorWithDomain:TpmsErrorDomain code:ERROR_CONNECTION_FAIL userInfo:nil];
-    }
-    [self.delegate driver:self onError:error];
+//    if (!error) {
+//        error = [NSError errorWithDomain:TpmsErrorDomain code:ERROR_CONNECTION_FAIL userInfo:nil];
+//    }
+//    [self.delegate driver:self onError:error];
+    
+    writeCharac = notifyCharac = nil;
+    self.state = TpmsStateOpenging;
+    [self.centralManager connectPeripheral:peripheral options:nil];
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {

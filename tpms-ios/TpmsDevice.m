@@ -19,7 +19,6 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
     NSUserDefaults *defaults;
     
     NSMutableArray<WriteCommand *> *commands;
-    BOOL needSettings;
 }
 
 + (TpmsDevice *)sharedInstance
@@ -38,7 +37,6 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
         self.dirver = [[BleDriver alloc] init];
         self.dirver.delegate = self;
         commands = [NSMutableArray array];
-        needSettings = YES;
         
         self.leftFront = [[TireStatus alloc] initWithName:@"left-front"];
         self.rightFront = [[TireStatus alloc] initWithName:@"right-front"];
@@ -125,7 +123,6 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
     NSLog(@"openDevice");
     CBPeripheral *peripheral = self.dirver.currentPeripheral;
     if (peripheral && [self.dirver connect:peripheral]) {
-        needSettings = YES;
         self.hasError = NO;
         return YES;
     }
@@ -137,7 +134,6 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
     [self.dirver disconnect];
     
     self.hasError = NO;
-    needSettings = YES;
     for (WriteCommand *command in commands) {
         [TpmsDevice cancelPreviousPerformRequestsWithTarget:self selector:@selector(runCommand:) object:command];
     }
@@ -402,9 +398,8 @@ static Byte ReadBuf[64];
 - (void)driver:(BleDriver *)driver didStateChanged:(TpmsDriverState)state {
     self.state = state;
     
-    if (state == TpmsStateOpen && needSettings) {
+    if (state == TpmsStateOpen) {
         [self querySettings];
-        needSettings = NO;
     }
 }
 

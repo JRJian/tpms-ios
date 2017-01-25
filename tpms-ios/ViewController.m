@@ -81,7 +81,6 @@ UIEdgeInsets UIEdgeInsetsOffset(UIEdgeInsets insets, CGFloat dx, CGFloat dy) {
     device = [TpmsDevice sharedInstance];
     [device addObserver:self forKeyPath:@"state" options:0 context:nil];
     [self updateDeviceState];
-    [device openDevice];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onError:) name:NotificationTpmsError object:nil];
 }
 
