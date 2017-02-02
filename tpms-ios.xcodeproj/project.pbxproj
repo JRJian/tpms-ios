@@ -8,30 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A8012B6C1E373B7100A3D64C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8012B6B1E373B7100A3D64C /* AVFoundation.framework */; };
-		A8012B861E373BE900A3D64C /* voice_tire1_battery_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B6E1E373BE900A3D64C /* voice_tire1_battery_low.wav */; };
-		A8012B871E373BE900A3D64C /* voice_tire1_match_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B6F1E373BE900A3D64C /* voice_tire1_match_success.wav */; };
-		A8012B881E373BE900A3D64C /* voice_tire1_pressure_error.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B701E373BE900A3D64C /* voice_tire1_pressure_error.wav */; };
-		A8012B891E373BE900A3D64C /* voice_tire1_pressure_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B711E373BE900A3D64C /* voice_tire1_pressure_high.wav */; };
-		A8012B8A1E373BE900A3D64C /* voice_tire1_pressure_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B721E373BE900A3D64C /* voice_tire1_pressure_low.wav */; };
-		A8012B8B1E373BE900A3D64C /* voice_tire1_temp_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B731E373BE900A3D64C /* voice_tire1_temp_high.wav */; };
-		A8012B8C1E373BE900A3D64C /* voice_tire2_battery_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B741E373BE900A3D64C /* voice_tire2_battery_low.wav */; };
-		A8012B8D1E373BE900A3D64C /* voice_tire2_match_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B751E373BE900A3D64C /* voice_tire2_match_success.wav */; };
-		A8012B8E1E373BE900A3D64C /* voice_tire2_pressure_error.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B761E373BE900A3D64C /* voice_tire2_pressure_error.wav */; };
-		A8012B8F1E373BE900A3D64C /* voice_tire2_pressure_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B771E373BE900A3D64C /* voice_tire2_pressure_high.wav */; };
-		A8012B901E373BE900A3D64C /* voice_tire2_pressure_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B781E373BE900A3D64C /* voice_tire2_pressure_low.wav */; };
-		A8012B911E373BE900A3D64C /* voice_tire2_temp_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B791E373BE900A3D64C /* voice_tire2_temp_high.wav */; };
-		A8012B921E373BE900A3D64C /* voice_tire3_battery_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7A1E373BE900A3D64C /* voice_tire3_battery_low.wav */; };
-		A8012B931E373BE900A3D64C /* voice_tire3_match_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7B1E373BE900A3D64C /* voice_tire3_match_success.wav */; };
-		A8012B941E373BE900A3D64C /* voice_tire3_pressure_error.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7C1E373BE900A3D64C /* voice_tire3_pressure_error.wav */; };
-		A8012B951E373BE900A3D64C /* voice_tire3_pressure_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7D1E373BE900A3D64C /* voice_tire3_pressure_high.wav */; };
-		A8012B961E373BE900A3D64C /* voice_tire3_pressure_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7E1E373BE900A3D64C /* voice_tire3_pressure_low.wav */; };
-		A8012B971E373BE900A3D64C /* voice_tire3_temp_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B7F1E373BE900A3D64C /* voice_tire3_temp_high.wav */; };
-		A8012B981E373BE900A3D64C /* voice_tire4_battery_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B801E373BE900A3D64C /* voice_tire4_battery_low.wav */; };
-		A8012B991E373BE900A3D64C /* voice_tire4_match_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B811E373BE900A3D64C /* voice_tire4_match_success.wav */; };
-		A8012B9A1E373BE900A3D64C /* voice_tire4_pressure_error.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B821E373BE900A3D64C /* voice_tire4_pressure_error.wav */; };
-		A8012B9B1E373BE900A3D64C /* voice_tire4_pressure_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B831E373BE900A3D64C /* voice_tire4_pressure_high.wav */; };
-		A8012B9C1E373BE900A3D64C /* voice_tire4_pressure_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B841E373BE900A3D64C /* voice_tire4_pressure_low.wav */; };
-		A8012B9D1E373BE900A3D64C /* voice_tire4_temp_high.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8012B851E373BE900A3D64C /* voice_tire4_temp_high.wav */; };
 		A805DBBC1E345F2B00D3F981 /* ic_tire_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A805DBBB1E345F2B00D3F981 /* ic_tire_off@2x.png */; };
 		A805DBC21E3469BF00D3F981 /* TireButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A805DBC11E3469BF00D3F981 /* TireButton.m */; };
 		A81186581E31EF120037D916 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A811865A1E31EF120037D916 /* Localizable.strings */; };
@@ -67,6 +43,8 @@
 		A8D9209A1E33A53F00FD75E7 /* picker_background_center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8D920971E33A53F00FD75E7 /* picker_background_center@2x.png */; };
 		A8D9209B1E33A53F00FD75E7 /* picker_background_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8D920981E33A53F00FD75E7 /* picker_background_left@2x.png */; };
 		A8D9209C1E33A53F00FD75E7 /* picker_background_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8D920991E33A53F00FD75E7 /* picker_background_right@2x.png */; };
+		A8E26D2D1E4229D000246CFD /* voices-en.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8E26D2B1E4229D000246CFD /* voices-en.bundle */; };
+		A8E26D2E1E4229D000246CFD /* voices.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8E26D2C1E4229D000246CFD /* voices.bundle */; };
 		A8E46F4F1E2B617B006AD6E3 /* ic_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8E46F4D1E2B617B006AD6E3 /* ic_setting@2x.png */; };
 		A8E46F521E2B69CD006AD6E3 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E46F511E2B69CD006AD6E3 /* SettingViewController.m */; };
 		A8E93D191E35E5840048EA98 /* WriteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E93D181E35E5840048EA98 /* WriteCommand.m */; };
@@ -87,30 +65,6 @@
 
 /* Begin PBXFileReference section */
 		A8012B6B1E373B7100A3D64C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A8012B6E1E373BE900A3D64C /* voice_tire1_battery_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_battery_low.wav; sourceTree = "<group>"; };
-		A8012B6F1E373BE900A3D64C /* voice_tire1_match_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_match_success.wav; sourceTree = "<group>"; };
-		A8012B701E373BE900A3D64C /* voice_tire1_pressure_error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_pressure_error.wav; sourceTree = "<group>"; };
-		A8012B711E373BE900A3D64C /* voice_tire1_pressure_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_pressure_high.wav; sourceTree = "<group>"; };
-		A8012B721E373BE900A3D64C /* voice_tire1_pressure_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_pressure_low.wav; sourceTree = "<group>"; };
-		A8012B731E373BE900A3D64C /* voice_tire1_temp_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire1_temp_high.wav; sourceTree = "<group>"; };
-		A8012B741E373BE900A3D64C /* voice_tire2_battery_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_battery_low.wav; sourceTree = "<group>"; };
-		A8012B751E373BE900A3D64C /* voice_tire2_match_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_match_success.wav; sourceTree = "<group>"; };
-		A8012B761E373BE900A3D64C /* voice_tire2_pressure_error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_pressure_error.wav; sourceTree = "<group>"; };
-		A8012B771E373BE900A3D64C /* voice_tire2_pressure_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_pressure_high.wav; sourceTree = "<group>"; };
-		A8012B781E373BE900A3D64C /* voice_tire2_pressure_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_pressure_low.wav; sourceTree = "<group>"; };
-		A8012B791E373BE900A3D64C /* voice_tire2_temp_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire2_temp_high.wav; sourceTree = "<group>"; };
-		A8012B7A1E373BE900A3D64C /* voice_tire3_battery_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_battery_low.wav; sourceTree = "<group>"; };
-		A8012B7B1E373BE900A3D64C /* voice_tire3_match_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_match_success.wav; sourceTree = "<group>"; };
-		A8012B7C1E373BE900A3D64C /* voice_tire3_pressure_error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_pressure_error.wav; sourceTree = "<group>"; };
-		A8012B7D1E373BE900A3D64C /* voice_tire3_pressure_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_pressure_high.wav; sourceTree = "<group>"; };
-		A8012B7E1E373BE900A3D64C /* voice_tire3_pressure_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_pressure_low.wav; sourceTree = "<group>"; };
-		A8012B7F1E373BE900A3D64C /* voice_tire3_temp_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire3_temp_high.wav; sourceTree = "<group>"; };
-		A8012B801E373BE900A3D64C /* voice_tire4_battery_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_battery_low.wav; sourceTree = "<group>"; };
-		A8012B811E373BE900A3D64C /* voice_tire4_match_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_match_success.wav; sourceTree = "<group>"; };
-		A8012B821E373BE900A3D64C /* voice_tire4_pressure_error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_pressure_error.wav; sourceTree = "<group>"; };
-		A8012B831E373BE900A3D64C /* voice_tire4_pressure_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_pressure_high.wav; sourceTree = "<group>"; };
-		A8012B841E373BE900A3D64C /* voice_tire4_pressure_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_pressure_low.wav; sourceTree = "<group>"; };
-		A8012B851E373BE900A3D64C /* voice_tire4_temp_high.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_tire4_temp_high.wav; sourceTree = "<group>"; };
 		A805DBBB1E345F2B00D3F981 /* ic_tire_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tire_off@2x.png"; sourceTree = "<group>"; };
 		A805DBC01E3469BF00D3F981 /* TireButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TireButton.h; sourceTree = "<group>"; };
 		A805DBC11E3469BF00D3F981 /* TireButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TireButton.m; sourceTree = "<group>"; };
@@ -163,6 +117,8 @@
 		A8D920971E33A53F00FD75E7 /* picker_background_center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picker_background_center@2x.png"; sourceTree = "<group>"; };
 		A8D920981E33A53F00FD75E7 /* picker_background_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picker_background_left@2x.png"; sourceTree = "<group>"; };
 		A8D920991E33A53F00FD75E7 /* picker_background_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picker_background_right@2x.png"; sourceTree = "<group>"; };
+		A8E26D2B1E4229D000246CFD /* voices-en.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "voices-en.bundle"; sourceTree = "<group>"; };
+		A8E26D2C1E4229D000246CFD /* voices.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = voices.bundle; sourceTree = "<group>"; };
 		A8E46F4D1E2B617B006AD6E3 /* ic_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_setting@2x.png"; sourceTree = "<group>"; };
 		A8E46F501E2B69CD006AD6E3 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A8E46F511E2B69CD006AD6E3 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -199,37 +155,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A8012B6D1E373BE900A3D64C /* voices */ = {
-			isa = PBXGroup;
-			children = (
-				A8012B6E1E373BE900A3D64C /* voice_tire1_battery_low.wav */,
-				A8012B6F1E373BE900A3D64C /* voice_tire1_match_success.wav */,
-				A8012B701E373BE900A3D64C /* voice_tire1_pressure_error.wav */,
-				A8012B711E373BE900A3D64C /* voice_tire1_pressure_high.wav */,
-				A8012B721E373BE900A3D64C /* voice_tire1_pressure_low.wav */,
-				A8012B731E373BE900A3D64C /* voice_tire1_temp_high.wav */,
-				A8012B741E373BE900A3D64C /* voice_tire2_battery_low.wav */,
-				A8012B751E373BE900A3D64C /* voice_tire2_match_success.wav */,
-				A8012B761E373BE900A3D64C /* voice_tire2_pressure_error.wav */,
-				A8012B771E373BE900A3D64C /* voice_tire2_pressure_high.wav */,
-				A8012B781E373BE900A3D64C /* voice_tire2_pressure_low.wav */,
-				A8012B791E373BE900A3D64C /* voice_tire2_temp_high.wav */,
-				A8012B7A1E373BE900A3D64C /* voice_tire3_battery_low.wav */,
-				A8012B7B1E373BE900A3D64C /* voice_tire3_match_success.wav */,
-				A8012B7C1E373BE900A3D64C /* voice_tire3_pressure_error.wav */,
-				A8012B7D1E373BE900A3D64C /* voice_tire3_pressure_high.wav */,
-				A8012B7E1E373BE900A3D64C /* voice_tire3_pressure_low.wav */,
-				A8012B7F1E373BE900A3D64C /* voice_tire3_temp_high.wav */,
-				A8012B801E373BE900A3D64C /* voice_tire4_battery_low.wav */,
-				A8012B811E373BE900A3D64C /* voice_tire4_match_success.wav */,
-				A8012B821E373BE900A3D64C /* voice_tire4_pressure_error.wav */,
-				A8012B831E373BE900A3D64C /* voice_tire4_pressure_high.wav */,
-				A8012B841E373BE900A3D64C /* voice_tire4_pressure_low.wav */,
-				A8012B851E373BE900A3D64C /* voice_tire4_temp_high.wav */,
-			);
-			path = voices;
-			sourceTree = "<group>";
-		};
 		A81783AD1E2770C400AC97D3 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +252,8 @@
 		A8AA41EA1E276B9300E23A31 /* tpms-ios */ = {
 			isa = PBXGroup;
 			children = (
-				A8012B6D1E373BE900A3D64C /* voices */,
+				A8E26D2B1E4229D000246CFD /* voices-en.bundle */,
+				A8E26D2C1E4229D000246CFD /* voices.bundle */,
 				A81783AD1E2770C400AC97D3 /* images */,
 				A8FBA6DB1E34A5F5007C414C /* core */,
 				A87DB5031E31A3B500596D42 /* views */,
@@ -447,61 +373,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8012B901E373BE900A3D64C /* voice_tire2_pressure_low.wav in Resources */,
-				A8012B891E373BE900A3D64C /* voice_tire1_pressure_high.wav in Resources */,
 				A8FBA6E01E34B358007C414C /* CenturyGothicBold.ttf in Resources */,
+				A8E26D2D1E4229D000246CFD /* voices-en.bundle in Resources */,
 				A8AA41FB1E276B9300E23A31 /* LaunchScreen.storyboard in Resources */,
 				A8402BEA1E344BAD004081F1 /* ic_minus@2x.png in Resources */,
-				A8012B881E373BE900A3D64C /* voice_tire1_pressure_error.wav in Resources */,
-				A8012B8F1E373BE900A3D64C /* voice_tire2_pressure_high.wav in Resources */,
 				A8FBA6CF1E349E1E007C414C /* background_star.png in Resources */,
+				A8E26D2E1E4229D000246CFD /* voices.bundle in Resources */,
 				A81783BA1E2773CB00AC97D3 /* ic_monitor@2x.png in Resources */,
 				A8F62A431E31C3B30014FAC3 /* radio_background_normal@2x.png in Resources */,
 				A8F62A421E31C3B30014FAC3 /* radio_background_checked@2x.png in Resources */,
 				A81EDB8A1E30A19E0081CEA1 /* bottombar@2x.png in Resources */,
-				A8012B8D1E373BE900A3D64C /* voice_tire2_match_success.wav in Resources */,
 				A8D9209C1E33A53F00FD75E7 /* picker_background_right@2x.png in Resources */,
-				A8012B9D1E373BE900A3D64C /* voice_tire4_temp_high.wav in Resources */,
 				A81783B21E2773C100AC97D3 /* ic_bluetooth_off@2x.png in Resources */,
-				A8012B981E373BE900A3D64C /* voice_tire4_battery_low.wav in Resources */,
-				A8012B931E373BE900A3D64C /* voice_tire3_match_success.wav in Resources */,
 				A8FBA6CE1E349E1E007C414C /* background_plain.png in Resources */,
-				A8012B8B1E373BE900A3D64C /* voice_tire1_temp_high.wav in Resources */,
 				A8E46F4F1E2B617B006AD6E3 /* ic_setting@2x.png in Resources */,
-				A8012B9A1E373BE900A3D64C /* voice_tire4_pressure_error.wav in Resources */,
 				A8AA41F81E276B9300E23A31 /* Assets.xcassets in Resources */,
-				A8012B951E373BE900A3D64C /* voice_tire3_pressure_high.wav in Resources */,
 				A8FBA6D91E34A546007C414C /* battery2.png in Resources */,
 				A8402BE81E344BA6004081F1 /* ic_add@2x.png in Resources */,
 				A81783B81E2773CB00AC97D3 /* ic_exchange@2x.png in Resources */,
 				A8FBA6DA1E34A546007C414C /* battery3.png in Resources */,
-				A8012B8A1E373BE900A3D64C /* voice_tire1_pressure_low.wav in Resources */,
 				A8A15DCA1E2F60FA00837F25 /* car.png in Resources */,
 				A8FBA6D81E34A546007C414C /* battery1.png in Resources */,
 				A819A2031E30FE6C00AE66CB /* tab_background_bottom@2x.png in Resources */,
-				A8012B961E373BE900A3D64C /* voice_tire3_pressure_low.wav in Resources */,
 				A81783B91E2773CB00AC97D3 /* ic_learn@2x.png in Resources */,
 				A81186581E31EF120037D916 /* Localizable.strings in Resources */,
 				A8FBA6D71E34A546007C414C /* battery0.png in Resources */,
 				A8D9209B1E33A53F00FD75E7 /* picker_background_left@2x.png in Resources */,
-				A8012B9C1E373BE900A3D64C /* voice_tire4_pressure_low.wav in Resources */,
 				A8AA41F61E276B9300E23A31 /* Main.storyboard in Resources */,
 				A81783B31E2773C100AC97D3 /* ic_bluetooth@2x.png in Resources */,
-				A8012B9B1E373BE900A3D64C /* voice_tire4_pressure_high.wav in Resources */,
 				A805DBBC1E345F2B00D3F981 /* ic_tire_off@2x.png in Resources */,
-				A8012B991E373BE900A3D64C /* voice_tire4_match_success.wav in Resources */,
-				A8012B941E373BE900A3D64C /* voice_tire3_pressure_error.wav in Resources */,
-				A8012B911E373BE900A3D64C /* voice_tire2_temp_high.wav in Resources */,
 				A8A35CD91E320AA2000FF29C /* ic_voice_on@2x.png in Resources */,
-				A8012B861E373BE900A3D64C /* voice_tire1_battery_low.wav in Resources */,
 				A8A35CD81E320AA2000FF29C /* ic_voice_off@2x.png in Resources */,
-				A8012B921E373BE900A3D64C /* voice_tire3_battery_low.wav in Resources */,
-				A8012B971E373BE900A3D64C /* voice_tire3_temp_high.wav in Resources */,
-				A8012B871E373BE900A3D64C /* voice_tire1_match_success.wav in Resources */,
 				A8FBA6CD1E349E1E007C414C /* background_modern.png in Resources */,
 				A8D9209A1E33A53F00FD75E7 /* picker_background_center@2x.png in Resources */,
-				A8012B8E1E373BE900A3D64C /* voice_tire2_pressure_error.wav in Resources */,
-				A8012B8C1E373BE900A3D64C /* voice_tire2_battery_low.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

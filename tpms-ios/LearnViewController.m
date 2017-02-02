@@ -153,23 +153,25 @@
     if (tire == matchingTire) {
         [self resetTireMatch];
         
-        NSBundle *bundle = [NSBundle mainBundle];
+        NSString *bundleName = [[FGLanguageTool sharedInstance].language isEqualToString:EN] ? @"voices-en" : @"voices";
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
         switch (tire) {
             case TIRE_LEFT_FRONT:
                 self.successAlertView.message = FGLocalizedString(@"alert_message_tire1_matched");
-                [device playAudio:[bundle URLForResource:@"R.raw.voice_tire1_match_success" withExtension:@"wav"]];
+                [device playAudio:[bundle URLForResource:@"voice_tire1_match_success" withExtension:@"wav"]];
                 break;
             case TIRE_LEFT_END:
                 self.successAlertView.message = FGLocalizedString(@"alert_message_tire2_matched");
-                [device playAudio:[bundle URLForResource:@"R.raw.voice_tire2_match_success" withExtension:@"wav"]];
+                [device playAudio:[bundle URLForResource:@"voice_tire2_match_success" withExtension:@"wav"]];
                 break;
             case TIRE_RIGHT_FRONT:
                 self.successAlertView.message = FGLocalizedString(@"alert_message_tire3_matched");
-                [device playAudio:[bundle URLForResource:@"R.raw.voice_tire3_match_success" withExtension:@"wav"]];
+                [device playAudio:[bundle URLForResource:@"voice_tire3_match_success" withExtension:@"wav"]];
                 break;
             case TIRE_RIGHT_END:
                 self.successAlertView.message = FGLocalizedString(@"alert_message_tire4_matched");
-                [device playAudio:[bundle URLForResource:@"R.raw.voice_tire4_match_success" withExtension:@"wav"]];
+                [device playAudio:[bundle URLForResource:@"voice_tire4_match_success" withExtension:@"wav"]];
                 break;
                 
         }

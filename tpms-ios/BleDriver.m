@@ -42,7 +42,9 @@ NSInteger const ERROR_CONNECTION_FAIL = 3;
     self = [super init];
     if (self) {
         dispatch_queue_t queue = dispatch_get_main_queue();
-        self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:queue];
+        self.centralManager = [[CBCentralManager alloc] initWithDelegate:self
+                                                                   queue:queue
+                                                                 options:@{ CBCentralManagerOptionRestoreIdentifierKey:@"ttonway-TPMS-identifier" }];
         
         writeServiceUUID = [CBUUID UUIDWithString:WRITE_SERVICE];
         notifyServiceUUID = [CBUUID UUIDWithString:NOTIFY_SERVICE];
@@ -138,6 +140,10 @@ NSInteger const ERROR_CONNECTION_FAIL = 3;
 
 
 #pragma mark - Central Methods
+-(void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *,id> *)dict {
+    NSLog(@"willRestoreState");
+}
+
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     NSLog(@"centralManagerDidUpdateState %ld", (long)central.state);
     if (central.state != CBCentralManagerStatePoweredOn) {

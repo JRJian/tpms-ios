@@ -241,6 +241,8 @@ CGFloat buttonSpacerHeight = 0;
 {
     if (containerView == NULL) {
         containerView = self.messageLabel;//[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
+    }
+    {
         CGRect frame = self.messageLabel.frame;
         NSString *str = self.messageLabel.text;
         if (!str) str = @"";

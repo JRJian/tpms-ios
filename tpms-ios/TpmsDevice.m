@@ -19,6 +19,9 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
     NSUserDefaults *defaults;
     
     NSMutableArray<WriteCommand *> *commands;
+    
+    NSString *alertSound;
+    NSString *alertMessage;
 }
 
 + (TpmsDevice *)sharedInstance
@@ -315,6 +318,13 @@ static Byte ReadBuf[64];
             [self writeTireStatus:status];
             
             NSString *msg = [self reportAlert:tire status:status];
+            
+            if (msg && [UIApplication sharedApplication].applicationState != UIApplicationStateActive) {
+                UILocalNotification *notification = [[UILocalNotification alloc] init];
+                notification.alertBody = msg;
+                notification.soundName = UILocalNotificationDefaultSoundName;
+                [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+            }
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationTireStatusUpdated object:msg userInfo:nil];
             break;
         }
@@ -427,7 +437,9 @@ static Byte ReadBuf[64];
             return nil;
     }
     
-    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *bundleName = [[FGLanguageTool sharedInstance].language isEqualToString:EN] ? @"voices-en" : @"voices";
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     NSString *voice;
     NSMutableString *result = [[NSMutableString alloc] initWithString:@""];
     NSString *key;
@@ -487,7 +499,10 @@ static Byte ReadBuf[64];
     } else {
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         self.audioPlayer.delegate = self;
-        [self.audioPlayer play];
+        if (![self.audioPlayer play]) {
+            NSLog(@"audioPlayer play failed");
+            [trackQueue removeAllObjects];
+        }
     }
 }
 - (void)playNextAudio {
@@ -499,11 +514,13 @@ static Byte ReadBuf[64];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    NSLog(@"audioPlayerDidFinishPlaying %@", [NSNumber numberWithBool:flag]);
     [self.audioPlayer stop];
     self.audioPlayer = nil;
     [self playNextAudio];
 }
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError * __nullable)error {
+    NSLog(@"audioPlayerDecodeErrorDidOccur %@", error);
     [self.audioPlayer stop];
     self.audioPlayer = nil;
     [self playNextAudio];
