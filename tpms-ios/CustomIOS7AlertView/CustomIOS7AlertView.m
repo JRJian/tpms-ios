@@ -41,7 +41,7 @@ CGFloat buttonSpacerHeight = 0;
 - (UILabel *)messageLabel
 {
     if (!_messageLabel) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 42)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 220, 42)];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor whiteColor];
         label.font = [UIFont systemFontOfSize:19];

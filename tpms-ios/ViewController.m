@@ -64,7 +64,6 @@ UIEdgeInsets UIEdgeInsetsOffset(UIEdgeInsets insets, CGFloat dx, CGFloat dy) {
     [self.exchangeButton addTarget:self action:@selector(viewExchangeController:) forControlEvents:UIControlEventTouchUpInside];
     [self.settingButton addTarget:self action:@selector(viewSettingController:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.bluetoothButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     [self.bluetoothButton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:0];
     [self.bluetoothButton addTarget:self action:@selector(gotoLeScan:) forControlEvents:UIControlEventTouchUpInside];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoLeScan:)];
@@ -143,7 +142,6 @@ UIEdgeInsets UIEdgeInsetsOffset(UIEdgeInsets insets, CGFloat dx, CGFloat dy) {
     [self.learnButton setTitle:FGLocalizedString(@"tab_learn") forState:UIControlStateNormal];
     [self.exchangeButton setTitle:FGLocalizedString(@"tab_exchange") forState:UIControlStateNormal];
     [self.settingButton setTitle:FGLocalizedString(@"tab_setting") forState:UIControlStateNormal];
-    [self.bluetoothButton setTitle:FGLocalizedString(@"btn_bluetooth") forState:UIControlStateNormal];
     
     for (UIButton *button in tabButtons) {
         [button layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:0];
@@ -154,7 +152,9 @@ UIEdgeInsets UIEdgeInsetsOffset(UIEdgeInsets insets, CGFloat dx, CGFloat dy) {
     self.learnButton.imageEdgeInsets = UIEdgeInsetsOffset(self.learnButton.imageEdgeInsets, 0, -4);
     self.exchangeButton.titleEdgeInsets =  UIEdgeInsetsOffset(self.exchangeButton.titleEdgeInsets, 0, -4);
     self.exchangeButton.imageEdgeInsets = UIEdgeInsetsOffset(self.exchangeButton.imageEdgeInsets, 0, -4);
-
+    
+    [self.bluetoothButton setTitle:FGLocalizedString(@"btn_bluetooth") forState:UIControlStateNormal];
+    [self.bluetoothButton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:0];
 }
 
 - (void)didReceiveMemoryWarning {
