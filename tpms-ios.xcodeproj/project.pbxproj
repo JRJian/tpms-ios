@@ -338,7 +338,7 @@
 				TargetAttributes = {
 					A8AA41E71E276B9300E23A31 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9TDVLJYH6W;
+						DevelopmentTeam = 7272WVZZ9G;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -566,7 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9TDVLJYH6W;
+				DEVELOPMENT_TEAM = 7272WVZZ9G;
 				INFOPLIST_FILE = "tpms-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -580,7 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9TDVLJYH6W;
+				DEVELOPMENT_TEAM = 7272WVZZ9G;
 				INFOPLIST_FILE = "tpms-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

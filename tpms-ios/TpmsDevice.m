@@ -48,6 +48,24 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
         
         defaults = [NSUserDefaults standardUserDefaults];
         [self initStatus];
+        
+//        self.leftFront.inited = YES;
+//        self.leftFront.battery = 2700;
+//        self.leftFront.temperature = 28;
+//        self.leftFront.pressure = 2.5f;
+//        self.leftEnd.inited = YES;
+//        self.leftEnd.battery = 2700;
+//        self.leftEnd.temperature = 28;
+//        self.leftEnd.pressure = 3.0f;
+//        self.leftEnd.pressureStatus = PRESSURE_HIGH;
+//        self.rightFront.inited = YES;
+//        self.rightFront.battery = 2700;
+//        self.rightFront.temperature = 28;
+//        self.rightFront.pressure = 2.5f;
+//        self.rightEnd.inited = YES;
+//        self.rightEnd.battery = 2700;
+//        self.rightEnd.temperature = 28;
+//        self.rightEnd.pressure = 2.5f;
     }
     return self;
 }
