@@ -90,19 +90,34 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
         status.inited = YES;
     } else {
         status.inited = NO;
-        return;
     }
-    status.pressureStatus = [num intValue];
+    if (num) {
+        status.pressureStatus = [num intValue];
+    }
     num = [defaults objectForKey:[prefix stringByAppendingString:@"-battery-status"]];
-    status.batteryStatus = [num intValue];
+    if (num) {
+        status.batteryStatus = [num intValue];
+    }
     num = [defaults objectForKey:[prefix stringByAppendingString:@"-temperature-status"]];
-    status.temperatureStatus = [num intValue];
+    if (num) {
+        status.temperatureStatus = [num intValue];
+    }
     num = [defaults objectForKey:[prefix stringByAppendingString:@"-pressure"]];
-    status.pressure = [num floatValue];
+    if (num) {
+        status.pressure = [num floatValue];
+    }
     num = [defaults objectForKey:[prefix stringByAppendingString:@"-battery"]];
-    status.battery = [num floatValue];
+    if (num) {
+        status.battery = [num floatValue];
+    }
     num = [defaults objectForKey:[prefix stringByAppendingString:@"-temperature"]];
-    status.temperature = [num floatValue];
+    if (num) {
+        status.temperature = [num floatValue];
+    }
+    
+    status.pressureBreak = status.batteryBreak = status.temperatureBreak = NO;
+    [status.pressureHistories removeAllObjects];
+    status.lastUpdateTime = nil;
 }
 
 - (void)writeTireStatus:(TireStatus *)status {
@@ -159,6 +174,25 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
         [TpmsDevice cancelPreviousPerformRequestsWithTarget:self selector:@selector(runCommand:) object:command];
     }
     [commands removeAllObjects];
+}
+
+- (void)checkNoSignalStatus {
+    NSDate *now = [NSDate date];
+    Byte array[4] = {TIRE_LEFT_FRONT, TIRE_RIGHT_FRONT, TIRE_RIGHT_END, TIRE_LEFT_END};
+    BOOL changed = NO;
+    for (int i = 0; i < 4; i++) {
+        Byte tire = array[i];
+        TireStatus *ts = [self getTireStatus:tire];
+        if (ts.lastUpdateTime && [now timeIntervalSinceDate:ts.lastUpdateTime] > /* 11min */ 11 * 60) {
+            ts.pressureStatus = PRESSURE_NO_SIGNAL;
+            changed = YES;
+        }
+    }
+    if (changed) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationTireStatusUpdated object:nil userInfo:nil];
+    }
+    
+    [self performSelector:@selector(checkNoSignalStatus) withObject:nil afterDelay:1.0];
 }
 
 - (Byte)makeParity:(Byte *)buf length:(NSInteger)length {
@@ -328,10 +362,11 @@ static Byte ReadBuf[64];
             status.temperatureStatus = (alarm >> 3) & 0x01;
             status.pressure = 0.1f * (int) pressure;
             status.temperature = (int) temp;
-            if (status.temperature > 100) {
-                status.temperature = 0;
-            }
             status.battery = 100 * (int) battery;
+            status.lastUpdateTime = [NSDate date];
+            if ([status isLeaking]) {
+                status.pressureStatus = PRESSURE_LEAKING;
+            }
             
             [self writeTireStatus:status];
             
@@ -427,7 +462,19 @@ static Byte ReadBuf[64];
     self.state = state;
     
     if (state == TpmsStateOpen) {
+        
+        NSDate *now  = [NSDate date];
+        self.leftFront.lastUpdateTime = now;
+        self.rightFront.lastUpdateTime = now;
+        self.rightEnd.lastUpdateTime = now;
+        self.leftEnd.lastUpdateTime = now;
+        [TpmsDevice cancelPreviousPerformRequestsWithTarget:self selector:@selector(checkNoSignalStatus) object:nil];
+        [self performSelector:@selector(checkNoSignalStatus) withObject:nil afterDelay:1.0];
+        
+
         [self querySettings];
+    } else if (state == TpmsStateClose) {
+        [TpmsDevice cancelPreviousPerformRequestsWithTarget:self selector:@selector(checkNoSignalStatus) object:nil];
     }
 }
 
@@ -478,6 +525,12 @@ static Byte ReadBuf[64];
             voice = [prefix stringByAppendingString:@"pressure_error"];
             [self playAudio:[bundle URLForResource:voice withExtension:@"wav"]];
             key = [prefix2 stringByAppendingString:@"pressure_error"];
+            [result appendString:FGLocalizedString(key)];
+            break;
+        case PRESSURE_LEAKING:
+            voice = [prefix stringByAppendingString:@"leaking"];
+            [self playAudio:[bundle URLForResource:voice withExtension:@"wav"]];
+            key = [prefix2 stringByAppendingString:@"leaking"];
             [result appendString:FGLocalizedString(key)];
             break;
     }
