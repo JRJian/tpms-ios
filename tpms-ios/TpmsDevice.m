@@ -183,7 +183,7 @@ NSString * const NotificationTireMatched = @"Notification_TireMatched";
     for (int i = 0; i < 4; i++) {
         Byte tire = array[i];
         TireStatus *ts = [self getTireStatus:tire];
-        if (ts.lastUpdateTime && [now timeIntervalSinceDate:ts.lastUpdateTime] > /* 11min */ 11 * 60) {
+        if (ts.lastUpdateTime && [now timeIntervalSinceDate:ts.lastUpdateTime] > /* 25min */ 25 * 60) {
             ts.pressureStatus = PRESSURE_NO_SIGNAL;
             changed = YES;
         }
