@@ -43,6 +43,8 @@
 "theme_star" = "Star";
 "theme_modern" = "Modern";
 "label_voice" = "Sound";
+"label_leaking" = "Leak";
+"label_no_signal" = "No signal";
 
 "alert_message_usb_host_unavailable" = "USB HOST not supported, please try other devices";
 "alert_message_usb_io_error" = "Host IO error";
@@ -61,6 +63,10 @@
 "alert_message_tire2_pressure_error" = "left end wheel sensor error";
 "alert_message_tire3_pressure_error" = "right front wheel sensor error";
 "alert_message_tire4_pressure_error" = "right end wheel sensor error";
+"alert_message_tire1_leaking" = "left front wheel leaking";
+"alert_message_tire2_leaking" = "left end wheel leaking";
+"alert_message_tire3_leaking" = "right front wheel leaking";
+"alert_message_tire4_leaking" = "right end wheel leaking";
 "alert_message_tire1_temp_high" = "left front wheel temperature high";
 "alert_message_tire2_temp_high" = "left end wheel temperature high";
 "alert_message_tire3_temp_high" = "right front wheel temperature high";

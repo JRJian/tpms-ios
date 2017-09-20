@@ -113,7 +113,15 @@
 - (void)setTireStatus:(TireStatus *)status {
     NSString * NO_VALUE = @"------";
     if (status.inited) {
-        self.pressureLabel.text = status.pressureStatus == PRESSURE_ERROR ? NO_VALUE : [Utils formatPressure:status.pressure];
+        if (status.pressureStatus == PRESSURE_ERROR) {
+            self.pressureLabel.text = NO_VALUE;
+        } else if (status.pressureStatus == PRESSURE_LEAKING) {
+            self.pressureLabel.text = FGLocalizedString(@"label_leaking");
+        } else if (status.pressureStatus == PRESSURE_NO_SIGNAL) {
+            self.pressureLabel.text = FGLocalizedString(@"label_no_signal");
+        } else {
+            self.pressureLabel.text = [Utils formatPressure:status.pressure];
+        }
         self.pressureLabel.textColor = status.pressureStatus == PRESSURE_NORMAL ? [UIColor commonYellowColor] : [UIColor commonOrangeColor];
         self.temperatureLabel.text = [Utils formatTemperature:status.temperature];
         self.temperatureLabel.textColor = status.temperatureStatus == TEMPERATURE_NORMAL ? [UIColor whiteColor] : [UIColor commonOrangeColor];
@@ -128,8 +136,13 @@
         }
         self.batteryView.tintColor = status.batteryStatus == BATTERY_NORMAL ? [UIColor whiteColor] : [UIColor commonOrangeColor];
     } else {
-        self.pressureLabel.text = NO_VALUE;
-        self.pressureLabel.textColor = [UIColor commonYellowColor];
+        if (status.pressureStatus == PRESSURE_NO_SIGNAL) {
+            self.pressureLabel.text = FGLocalizedString(@"label_no_signal");
+            self.pressureLabel.textColor = [UIColor commonOrangeColor];
+        } else {
+            self.pressureLabel.text = NO_VALUE;
+            self.pressureLabel.textColor = [UIColor commonYellowColor];
+        }
         self.temperatureLabel.text = NO_VALUE;
         self.temperatureLabel.textColor = [UIColor whiteColor];
         self.batteryView.image = battery0;

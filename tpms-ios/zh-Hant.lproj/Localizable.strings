@@ -42,6 +42,8 @@
 "theme_star" = "星空";
 "theme_modern" = "科技";
 "label_voice" = "聲音";
+"label_leaking" = "漏氣";
+"label_no_signal" = "無信號";
 
 "alert_message_usb_host_unavailable" = "您的手機不支持USB HOST，請更換其他手機再試";
 "alert_message_usb_io_error" = "主機連接錯誤";
@@ -60,6 +62,10 @@
 "alert_message_tire2_pressure_error" = "左後輪傳感器失效";
 "alert_message_tire3_pressure_error" = "右前輪傳感器失效";
 "alert_message_tire4_pressure_error" = "右後輪傳感器失效";
+"alert_message_tire1_leaking" = "左前輪漏氣";
+"alert_message_tire2_leaking" = "左後輪漏氣";
+"alert_message_tire3_leaking" = "右前輪漏氣";
+"alert_message_tire4_leaking" = "右後輪漏氣";
 "alert_message_tire1_temp_high" = "左前輪溫度過高";
 "alert_message_tire2_temp_high" = "左後輪溫度過高";
 "alert_message_tire3_temp_high" = "右前輪溫度過高";
